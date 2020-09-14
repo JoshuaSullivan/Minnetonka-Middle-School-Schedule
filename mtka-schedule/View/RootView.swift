@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RootView: View {
+    var homeViewModel = HomeViewModel()
+
     var body: some View {
         NavigationView {
-            Text("Oh hai!")
+            HomeView(viewModel: homeViewModel)
         }
     }
 }

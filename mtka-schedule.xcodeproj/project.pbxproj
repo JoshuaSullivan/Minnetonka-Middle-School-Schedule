@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC531E19250D480E0014A2E7 /* ClassConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E18250D480E0014A2E7 /* ClassConfigView.swift */; };
+		BC531E1B250ECB650014A2E7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E1A250ECB650014A2E7 /* Date.swift */; };
+		BC531E1D250ECBC20014A2E7 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E1C250ECBC20014A2E7 /* Grade.swift */; };
+		BC531E1F250ECBD20014A2E7 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E1E250ECBD20014A2E7 /* Week.swift */; };
+		BC531E21250ECBE40014A2E7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E20250ECBE40014A2E7 /* Day.swift */; };
+		BC531E23250ECBFB0014A2E7 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E22250ECBFB0014A2E7 /* Block.swift */; };
+		BC531E25250ECC100014A2E7 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E24250ECC100014A2E7 /* Class.swift */; };
+		BC531E27250ECC410014A2E7 /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E26250ECC410014A2E7 /* TimeOfDay.swift */; };
+		BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E28250ECC7C0014A2E7 /* GradePickerView.swift */; };
+		BC531E2B250ED0C50014A2E7 /* PeriodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */; };
+		BC531E2F250ED1680014A2E7 /* PeriodConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E2E250ED1680014A2E7 /* PeriodConfigurationView.swift */; };
+		BC531E33250ED3EB0014A2E7 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E32250ED3EB0014A2E7 /* Binding.swift */; };
+		BC531E35250F14700014A2E7 /* ClassConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E34250F14700014A2E7 /* ClassConfiguration.swift */; };
+		BC531E37250F9E4D0014A2E7 /* Configuraton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E36250F9E4D0014A2E7 /* Configuraton.swift */; };
 		BCAF60D7250AF36600725CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60D6250AF36600725CE4 /* AppDelegate.swift */; };
 		BCAF60D9250AF36600725CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60D8250AF36600725CE4 /* SceneDelegate.swift */; };
 		BCAF60DB250AF36600725CE4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60DA250AF36600725CE4 /* RootView.swift */; };
@@ -18,18 +32,23 @@
 		BCAF60F0250B098A00725CE4 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60EF250B098A00725CE4 /* DateFormatter.swift */; };
 		BCAF60F2250B19FD00725CE4 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60F1250B19FD00725CE4 /* ConfigView.swift */; };
 		BCAF60F4250B1A3400725CE4 /* ConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60F3250B1A3400725CE4 /* ConfigViewModel.swift */; };
-		BCAF60F6250B1B3D00725CE4 /* PeriodConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60F5250B1B3D00725CE4 /* PeriodConfigView.swift */; };
-		BCAF60F8250B1BD400725CE4 /* PeriodConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60F7250B1BD400725CE4 /* PeriodConfigViewModel.swift */; };
-		BCAF60FD250B1C9600725CE4 /* GradeLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF60FC250B1C9600725CE4 /* GradeLevel.swift */; };
-		BCAF6101250B22EB00725CE4 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF6100250B22EB00725CE4 /* Period.swift */; };
-		BCAF6103250B23C800725CE4 /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF6102250B23C800725CE4 /* TimeOfDay.swift */; };
-		BCAF6105250B256900725CE4 /* SchoolDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF6104250B256900725CE4 /* SchoolDay.swift */; };
-		BCAF6107250B288100725CE4 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF6106250B288100725CE4 /* Block.swift */; };
-		BCAF6109250B28E200725CE4 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF6108250B28E200725CE4 /* Segment.swift */; };
-		BCAF610B250B29BD00725CE4 /* ClassDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF610A250B29BD00725CE4 /* ClassDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC531E18250D480E0014A2E7 /* ClassConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassConfigView.swift; sourceTree = "<group>"; };
+		BC531E1A250ECB650014A2E7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BC531E1C250ECBC20014A2E7 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		BC531E1E250ECBD20014A2E7 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		BC531E20250ECBE40014A2E7 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		BC531E22250ECBFB0014A2E7 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		BC531E24250ECC100014A2E7 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		BC531E26250ECC410014A2E7 /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
+		BC531E28250ECC7C0014A2E7 /* GradePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradePickerView.swift; sourceTree = "<group>"; };
+		BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodConfiguration.swift; sourceTree = "<group>"; };
+		BC531E2E250ED1680014A2E7 /* PeriodConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodConfigurationView.swift; sourceTree = "<group>"; };
+		BC531E32250ED3EB0014A2E7 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		BC531E34250F14700014A2E7 /* ClassConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassConfiguration.swift; sourceTree = "<group>"; };
+		BC531E36250F9E4D0014A2E7 /* Configuraton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuraton.swift; sourceTree = "<group>"; };
 		BCAF60D3250AF36600725CE4 /* mtka-schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mtka-schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAF60D6250AF36600725CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCAF60D8250AF36600725CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,15 +62,6 @@
 		BCAF60EF250B098A00725CE4 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		BCAF60F1250B19FD00725CE4 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		BCAF60F3250B1A3400725CE4 /* ConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewModel.swift; sourceTree = "<group>"; };
-		BCAF60F5250B1B3D00725CE4 /* PeriodConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodConfigView.swift; sourceTree = "<group>"; };
-		BCAF60F7250B1BD400725CE4 /* PeriodConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodConfigViewModel.swift; sourceTree = "<group>"; };
-		BCAF60FC250B1C9600725CE4 /* GradeLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeLevel.swift; sourceTree = "<group>"; };
-		BCAF6100250B22EB00725CE4 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
-		BCAF6102250B23C800725CE4 /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
-		BCAF6104250B256900725CE4 /* SchoolDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDay.swift; sourceTree = "<group>"; };
-		BCAF6106250B288100725CE4 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
-		BCAF6108250B28E200725CE4 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
-		BCAF610A250B29BD00725CE4 /* ClassDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				BCAF60EF250B098A00725CE4 /* DateFormatter.swift */,
+				BC531E1A250ECB650014A2E7 /* Date.swift */,
+				BC531E32250ED3EB0014A2E7 /* Binding.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -120,7 +132,9 @@
 				BCAF60DA250AF36600725CE4 /* RootView.swift */,
 				BCAF60EA250B075C00725CE4 /* HomeView.swift */,
 				BCAF60F1250B19FD00725CE4 /* ConfigView.swift */,
-				BCAF60F5250B1B3D00725CE4 /* PeriodConfigView.swift */,
+				BC531E28250ECC7C0014A2E7 /* GradePickerView.swift */,
+				BC531E2E250ED1680014A2E7 /* PeriodConfigurationView.swift */,
+				BC531E18250D480E0014A2E7 /* ClassConfigView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,7 +144,6 @@
 			children = (
 				BCAF60EC250B086E00725CE4 /* HomeViewModel.swift */,
 				BCAF60F3250B1A3400725CE4 /* ConfigViewModel.swift */,
-				BCAF60F7250B1BD400725CE4 /* PeriodConfigViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,13 +151,15 @@
 		BCAF60FB250B1C7E00725CE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BCAF60FC250B1C9600725CE4 /* GradeLevel.swift */,
-				BCAF6100250B22EB00725CE4 /* Period.swift */,
-				BCAF6102250B23C800725CE4 /* TimeOfDay.swift */,
-				BCAF6104250B256900725CE4 /* SchoolDay.swift */,
-				BCAF6106250B288100725CE4 /* Block.swift */,
-				BCAF6108250B28E200725CE4 /* Segment.swift */,
-				BCAF610A250B29BD00725CE4 /* ClassDescription.swift */,
+				BC531E1C250ECBC20014A2E7 /* Grade.swift */,
+				BC531E1E250ECBD20014A2E7 /* Week.swift */,
+				BC531E20250ECBE40014A2E7 /* Day.swift */,
+				BC531E22250ECBFB0014A2E7 /* Block.swift */,
+				BC531E24250ECC100014A2E7 /* Class.swift */,
+				BC531E26250ECC410014A2E7 /* TimeOfDay.swift */,
+				BC531E36250F9E4D0014A2E7 /* Configuraton.swift */,
+				BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */,
+				BC531E34250F14700014A2E7 /* ClassConfiguration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,23 +234,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC531E21250ECBE40014A2E7 /* Day.swift in Sources */,
+				BC531E19250D480E0014A2E7 /* ClassConfigView.swift in Sources */,
 				BCAF60D7250AF36600725CE4 /* AppDelegate.swift in Sources */,
-				BCAF60FD250B1C9600725CE4 /* GradeLevel.swift in Sources */,
-				BCAF6105250B256900725CE4 /* SchoolDay.swift in Sources */,
 				BCAF60F0250B098A00725CE4 /* DateFormatter.swift in Sources */,
+				BC531E37250F9E4D0014A2E7 /* Configuraton.swift in Sources */,
+				BC531E27250ECC410014A2E7 /* TimeOfDay.swift in Sources */,
 				BCAF60F4250B1A3400725CE4 /* ConfigViewModel.swift in Sources */,
-				BCAF6103250B23C800725CE4 /* TimeOfDay.swift in Sources */,
 				BCAF60EB250B075C00725CE4 /* HomeView.swift in Sources */,
-				BCAF60F6250B1B3D00725CE4 /* PeriodConfigView.swift in Sources */,
+				BC531E2B250ED0C50014A2E7 /* PeriodConfiguration.swift in Sources */,
+				BC531E35250F14700014A2E7 /* ClassConfiguration.swift in Sources */,
+				BC531E1D250ECBC20014A2E7 /* Grade.swift in Sources */,
+				BC531E1F250ECBD20014A2E7 /* Week.swift in Sources */,
 				BCAF60F2250B19FD00725CE4 /* ConfigView.swift in Sources */,
 				BCAF60D9250AF36600725CE4 /* SceneDelegate.swift in Sources */,
+				BC531E1B250ECB650014A2E7 /* Date.swift in Sources */,
+				BC531E25250ECC100014A2E7 /* Class.swift in Sources */,
+				BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */,
+				BC531E2F250ED1680014A2E7 /* PeriodConfigurationView.swift in Sources */,
+				BC531E23250ECBFB0014A2E7 /* Block.swift in Sources */,
 				BCAF60ED250B086E00725CE4 /* HomeViewModel.swift in Sources */,
-				BCAF6109250B28E200725CE4 /* Segment.swift in Sources */,
-				BCAF6101250B22EB00725CE4 /* Period.swift in Sources */,
-				BCAF6107250B288100725CE4 /* Block.swift in Sources */,
-				BCAF610B250B29BD00725CE4 /* ClassDescription.swift in Sources */,
 				BCAF60DB250AF36600725CE4 /* RootView.swift in Sources */,
-				BCAF60F8250B1BD400725CE4 /* PeriodConfigViewModel.swift in Sources */,
+				BC531E33250ED3EB0014A2E7 /* Binding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

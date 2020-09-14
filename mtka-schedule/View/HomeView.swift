@@ -17,9 +17,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
             .navigationBarItems(
                 trailing:
                     NavigationLink(
-                        destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                        destination: ConfigView(viewModel: viewModel.configViewModel),
                         label: {
-                            Image(systemName: "gearshape")
+                            Image(systemName: "gear")
                                 .font(.title)
                         })
 
@@ -40,5 +40,6 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView {
             HomeView(viewModel: HomeViewModel())
         }
+        .preferredColorScheme(.dark)
     }
 }
