@@ -231,20 +231,4 @@ print("WEEK A\n\(weekA)")
 print("\n\n")
 print("WEEK B\n\(weekB)")
 
-//let start = TimeOfDay(hours: 9, minutes: 30)
-//let end = TimeOfDay(hours: 11, minutes: 06)
-//print("Duration: \(start.duration(to: end))")
-//
-//let startA = TimeOfDay(hours: 9, minutes: 30)
-//let endA = TimeOfDay(hours: 10, minutes: 17)
-//let startB = TimeOfDay(hours: 10, minutes: 21)
-//let endB = TimeOfDay(hours: 11, minutes: 06)
-//
-//print("A: \(startA.duration(to: endA)) / B: \(startB.duration(to: endB))")
-//
-//let startC = TimeOfDay(hours: 14, minutes: 05)
-//let endC = TimeOfDay(hours: 14, minutes: 50)
-//let startD = TimeOfDay(hours: 14, minutes: 54)
-//let endD = TimeOfDay(hours: 15, minutes: 40)
-//
-//print("C: \(startC.duration(to: endC)) / D: \(startD.duration(to: endD))")
+print(Calendar.current.component(.weekOfYear, from: Date()))

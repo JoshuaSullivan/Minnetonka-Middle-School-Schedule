@@ -37,12 +37,16 @@ struct ConfigView<ViewModel: ConfigViewModelProtocol>: View {
         }) {
             Text("Save")
         })
+        .tabItem {
+            Image(systemName: "gear")
+            Text("Settings")
+        }
     }
 }
 
 struct ConfigView_Previews: PreviewProvider {
 
-    static var vm = ConfigViewModel()
+    static var vm = ConfigViewModel(storage: StorageService())
 
     static var previews: some View {
         NavigationView {

@@ -12,18 +12,16 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                AtAGlanceView(viewModel: viewModel.atAGlanceViewModel)
+            }
             .navigationBarTitle(viewModel.screenTitle)
-            .navigationBarItems(
-                trailing:
-                    NavigationLink(
-                        destination: ConfigView(viewModel: viewModel.configViewModel),
-                        label: {
-                            Image(systemName: "gear")
-                                .font(.title)
-                        })
-
-            )
+        }
+        .tabItem {
+            Image(systemName: "house")
+            Text("Home")
+        }
     }
 }
 
@@ -37,8 +35,8 @@ struct HomeView_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-        NavigationView {
-            HomeView(viewModel: HomeViewModel())
+        TabView {
+            HomeView(viewModel: HomeViewModel(storage: StorageService()))
         }
         .preferredColorScheme(.dark)
     }

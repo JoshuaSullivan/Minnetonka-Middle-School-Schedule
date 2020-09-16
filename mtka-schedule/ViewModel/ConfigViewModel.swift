@@ -5,7 +5,8 @@
 //  Created by Joshua Sullivan on 9/10/20.
 //
 
-import SwiftUI
+import Foundation
+import Combine
 
 protocol ConfigViewModelProtocol: ObservableObject {
     var screenTitle: String { get }
@@ -18,10 +19,9 @@ protocol ConfigViewModelProtocol: ObservableObject {
 
 class ConfigViewModel: ConfigViewModelProtocol {
 
-    private static let encoder = JSONEncoder()
-    private static let decoder = JSONDecoder()
+    private let storageService: StorageServiceProtocol
 
-    private let defaultsKey = "configurationData"
+    private var storageSub: AnyCancellable?
 
     var screenTitle: String { return "Settings" }
 
@@ -38,37 +38,20 @@ class ConfigViewModel: ConfigViewModelProtocol {
         PeriodConfiguration(index: 6),
     ]
 
-    init() {
-        loadConfiguration()
+    init(storage: StorageServiceProtocol) {
+        self.storageService = storage
+
+        storageSub = storage.configuration.sink { [weak self] config in
+            guard let self = self else { return }
+            self.studentName = config.studentName
+            self.gradeLevel = config.gradeLevel
+            self.periods = config.periods
+            self.objectWillChange.send()
+        }
     }
 
     func saveTapped() {
-        saveConfiguration()
-    }
-
-    private func saveConfiguration() {
-        let config = Configuration(studentName: studentName, gradeLevel: gradeLevel, schedule: periods)
-        do {
-            let data = try ConfigViewModel.encoder.encode(config)
-            UserDefaults.standard.set(data, forKey: defaultsKey)
-        } catch {
-            print("Failed to save data: \(error)")
-        }
-    }
-
-    private func loadConfiguration() {
-        guard let data = UserDefaults.standard.data(forKey: defaultsKey) else {
-            print("No saved data found. Using default values.")
-            return
-        }
-        do {
-            let config = try ConfigViewModel.decoder.decode(Configuration.self, from: data)
-            studentName = config.studentName
-            gradeLevel = config.gradeLevel
-            periods = config.schedule
-            objectWillChange.send()
-        } catch {
-            print("Failed to decode data: \(error)")
-        }
+        let config = Configuration(studentName: studentName, gradeLevel: gradeLevel, periods: periods)
+        storageService.set(configuration: config)
     }
 }

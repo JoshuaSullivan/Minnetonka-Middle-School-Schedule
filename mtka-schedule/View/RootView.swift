@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct RootView: View {
-    var homeViewModel = HomeViewModel()
+
+    let homeViewModel: HomeViewModel
+    let configViewModel: ConfigViewModel
 
     var body: some View {
-        NavigationView {
+        TabView {
             HomeView(viewModel: homeViewModel)
+            ConfigView(viewModel: configViewModel)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let storage = StorageService()
+
     static var previews: some View {
-        RootView()
+        RootView(
+            homeViewModel: HomeViewModel(storage: storage),
+            configViewModel: ConfigViewModel(storage: storage)
+        )
     }
 }

@@ -10,5 +10,17 @@ import Foundation
 struct Configuration: Codable {
     let studentName: String
     let gradeLevel: Grade
-    let schedule: [PeriodConfiguration]
+    let periods: [PeriodConfiguration]
+
+    static let empty = Configuration(
+        studentName: "",
+        gradeLevel: .six,
+        periods: [
+            PeriodConfiguration(index: 1),
+            PeriodConfiguration(index: 2),
+            PeriodConfiguration(index: 3),
+            PeriodConfiguration(index: 4),
+            PeriodConfiguration(index: 5),
+            PeriodConfiguration(index: 6),
+        ])
 }
