@@ -12,6 +12,7 @@ protocol ConfigViewModelProtocol: ObservableObject {
     var screenTitle: String { get }
     var studentName: String { get set }
     var gradeLevel: Grade { get set }
+    var advisoryTeacher: String { get set }
     var periods: [PeriodConfiguration] { get set }
 
     func saveTapped()
@@ -25,11 +26,13 @@ class ConfigViewModel: ConfigViewModelProtocol {
 
     var screenTitle: String { return "Settings" }
 
-    var studentName: String = ""
+    @Published var studentName: String = ""
 
-    var gradeLevel: Grade = Grade.six
+    @Published var gradeLevel: Grade = Grade.six
 
-    var periods: [PeriodConfiguration] = [
+    @Published var advisoryTeacher: String = ""
+
+    @Published var periods: [PeriodConfiguration] = [
         PeriodConfiguration(index: 1),
         PeriodConfiguration(index: 2),
         PeriodConfiguration(index: 3),
@@ -51,7 +54,7 @@ class ConfigViewModel: ConfigViewModelProtocol {
     }
 
     func saveTapped() {
-        let config = Configuration(studentName: studentName, gradeLevel: gradeLevel, periods: periods)
+        let config = Configuration(studentName: studentName, gradeLevel: gradeLevel, periods: periods, advisoryTeacher: advisoryTeacher)
         storageService.set(configuration: config)
     }
 }

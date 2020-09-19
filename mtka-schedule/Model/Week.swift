@@ -8,7 +8,14 @@
 import Foundation
 
 struct Week: CustomStringConvertible {
+
+    enum WeekType {
+        case a
+        case b
+    }
+
     let start: Date
+    let type: WeekType
     let days: [Day]
 
     var description: String {

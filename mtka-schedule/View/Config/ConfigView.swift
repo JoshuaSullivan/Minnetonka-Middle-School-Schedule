@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ConfigView<ViewModel: ConfigViewModelProtocol>: View {
-
+    
     @ObservedObject var viewModel: ViewModel
-
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 16) {
@@ -19,14 +19,20 @@ struct ConfigView<ViewModel: ConfigViewModelProtocol>: View {
                     TextField("Name", text: $viewModel.studentName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
-
+                
                 GradePickerView(grade: $viewModel.gradeLevel)
-
+                
+                VStack(spacing: 4) {
+                    Text("Assembly Teacher")
+                    TextField("Name", text: $viewModel.advisoryTeacher)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                
                 ForEach(viewModel.periods) { period in
                     Divider()
                     PeriodConfigurationView(period: period)
                 }
-
+                
                 Spacer()
             }
         }
@@ -45,9 +51,9 @@ struct ConfigView<ViewModel: ConfigViewModelProtocol>: View {
 }
 
 struct ConfigView_Previews: PreviewProvider {
-
+    
     static var vm = ConfigViewModel(storage: StorageService())
-
+    
     static var previews: some View {
         NavigationView {
             ConfigView(viewModel: vm)

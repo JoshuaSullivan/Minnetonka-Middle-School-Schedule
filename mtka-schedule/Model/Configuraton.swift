@@ -11,6 +11,7 @@ struct Configuration: Codable {
     let studentName: String
     let gradeLevel: Grade
     let periods: [PeriodConfiguration]
+    let advisoryTeacher: String
 
     static let empty = Configuration(
         studentName: "",
@@ -22,5 +23,7 @@ struct Configuration: Codable {
             PeriodConfiguration(index: 4),
             PeriodConfiguration(index: 5),
             PeriodConfiguration(index: 6),
-        ])
+        ],
+        advisoryTeacher: ""
+    )
 }
