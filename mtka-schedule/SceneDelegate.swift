@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let storage = StorageService()
-        let homeViewModel = HomeViewModel(storage: storage)
+        let schedule = ScheduleService(storage: storage)
+        let homeViewModel = HomeViewModel(scheduleService: schedule)
         let configViewModel = ConfigViewModel(storage: storage)
         let contentView = RootView(
             homeViewModel: homeViewModel,

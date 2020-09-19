@@ -12,11 +12,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        NavigationView {
-            VStack {
-                AtAGlanceView(viewModel: viewModel.atAGlanceViewModel)
-            }
-            .navigationBarTitle(viewModel.screenTitle)
+        VStack {
+            ScheduleView(viewModel: viewModel.scheduleViewModel)
         }
         .tabItem {
             Image(systemName: "house")
@@ -36,7 +33,7 @@ struct HomeView_Previews: PreviewProvider {
 
     static var previews: some View {
         TabView {
-            HomeView(viewModel: HomeViewModel(storage: StorageService()))
+            HomeView(viewModel: HomeViewModel(scheduleService: ScheduleService(storage: StorageService())))
         }
         .preferredColorScheme(.dark)
     }

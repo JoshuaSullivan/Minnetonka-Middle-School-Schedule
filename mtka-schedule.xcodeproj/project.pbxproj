@@ -34,6 +34,14 @@
 		BCC24FC22513D7BE001511D1 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FC12513D7BE001511D1 /* ScheduleViewModel.swift */; };
 		BCC24FC52513D7F4001511D1 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FC42513D7F4001511D1 /* Schedule.swift */; };
 		BCC24FC825146FBF001511D1 /* ScheduleTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FC725146FBF001511D1 /* ScheduleTemplate.swift */; };
+		BCC24FD125167B4C001511D1 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FD025167B4C001511D1 /* ScheduleView.swift */; };
+		BCC24FD425167DB5001511D1 /* TimeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FD325167DB5001511D1 /* TimeIndicator.swift */; };
+		BCC24FD725167EDB001511D1 /* ScheduleBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FD625167EDB001511D1 /* ScheduleBlockView.swift */; };
+		BCC24FDA251685DE001511D1 /* ScheduleBlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FD9251685DE001511D1 /* ScheduleBlockViewModel.swift */; };
+		BCC24FDD25169D5A001511D1 /* ScheduleDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FDC25169D5A001511D1 /* ScheduleDayViewModel.swift */; };
+		BCC24FE025169EAF001511D1 /* ScheduleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FDF25169EAF001511D1 /* ScheduleDayView.swift */; };
+		BCC24FE325169F20001511D1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE225169F20001511D1 /* PreviewData.swift */; };
+		BCC24FE62516A0CA001511D1 /* ScheduleNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */; };
 		BCDC56762510620D00435E33 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC56752510620D00435E33 /* StorageService.swift */; };
 		BCDC567A2510FA7700435E33 /* AtAGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC56792510FA7700435E33 /* AtAGlanceView.swift */; };
 		BCDC56802511054300435E33 /* MinuteTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC567F2511054300435E33 /* MinuteTicker.swift */; };
@@ -71,6 +79,14 @@
 		BCC24FC12513D7BE001511D1 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		BCC24FC42513D7F4001511D1 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		BCC24FC725146FBF001511D1 /* ScheduleTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTemplate.swift; sourceTree = "<group>"; };
+		BCC24FD025167B4C001511D1 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		BCC24FD325167DB5001511D1 /* TimeIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndicator.swift; sourceTree = "<group>"; };
+		BCC24FD625167EDB001511D1 /* ScheduleBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBlockView.swift; sourceTree = "<group>"; };
+		BCC24FD9251685DE001511D1 /* ScheduleBlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBlockViewModel.swift; sourceTree = "<group>"; };
+		BCC24FDC25169D5A001511D1 /* ScheduleDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayViewModel.swift; sourceTree = "<group>"; };
+		BCC24FDF25169EAF001511D1 /* ScheduleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayView.swift; sourceTree = "<group>"; };
+		BCC24FE225169F20001511D1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNavView.swift; sourceTree = "<group>"; };
 		BCDC56752510620D00435E33 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		BCDC56792510FA7700435E33 /* AtAGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceView.swift; sourceTree = "<group>"; };
 		BCDC567F2511054300435E33 /* MinuteTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTicker.swift; sourceTree = "<group>"; };
@@ -128,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BCAF60DF250AF36600725CE4 /* Preview Assets.xcassets */,
+				BCC24FE225169F20001511D1 /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -158,6 +175,8 @@
 				BCAF60F3250B1A3400725CE4 /* ConfigViewModel.swift */,
 				BCDC568125110AF300435E33 /* AtAGlanceViewModel.swift */,
 				BCC24FC12513D7BE001511D1 /* ScheduleViewModel.swift */,
+				BCC24FDC25169D5A001511D1 /* ScheduleDayViewModel.swift */,
+				BCC24FD9251685DE001511D1 /* ScheduleBlockViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -192,6 +211,11 @@
 			isa = PBXGroup;
 			children = (
 				BCAF60EA250B075C00725CE4 /* HomeView.swift */,
+				BCC24FD025167B4C001511D1 /* ScheduleView.swift */,
+				BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */,
+				BCC24FDF25169EAF001511D1 /* ScheduleDayView.swift */,
+				BCC24FD625167EDB001511D1 /* ScheduleBlockView.swift */,
+				BCC24FD325167DB5001511D1 /* TimeIndicator.swift */,
 				BCDC56792510FA7700435E33 /* AtAGlanceView.swift */,
 			);
 			path = Home;
@@ -292,27 +316,35 @@
 				BC531E19250D480E0014A2E7 /* ClassConfigView.swift in Sources */,
 				BCAF60D7250AF36600725CE4 /* AppDelegate.swift in Sources */,
 				BCC24FC22513D7BE001511D1 /* ScheduleViewModel.swift in Sources */,
+				BCC24FD725167EDB001511D1 /* ScheduleBlockView.swift in Sources */,
+				BCC24FD125167B4C001511D1 /* ScheduleView.swift in Sources */,
 				BCAF60F0250B098A00725CE4 /* DateFormatter.swift in Sources */,
 				BC531E37250F9E4D0014A2E7 /* Configuraton.swift in Sources */,
 				BCDC568425115F3500435E33 /* ScheduleService.swift in Sources */,
+				BCC24FDD25169D5A001511D1 /* ScheduleDayViewModel.swift in Sources */,
 				BC531E27250ECC410014A2E7 /* TimeOfDay.swift in Sources */,
+				BCC24FE62516A0CA001511D1 /* ScheduleNavView.swift in Sources */,
 				BCAF60F4250B1A3400725CE4 /* ConfigViewModel.swift in Sources */,
 				BCDC567A2510FA7700435E33 /* AtAGlanceView.swift in Sources */,
 				BCC24FC825146FBF001511D1 /* ScheduleTemplate.swift in Sources */,
 				BCAF60EB250B075C00725CE4 /* HomeView.swift in Sources */,
 				BC531E2B250ED0C50014A2E7 /* PeriodConfiguration.swift in Sources */,
+				BCC24FDA251685DE001511D1 /* ScheduleBlockViewModel.swift in Sources */,
 				BCDC56762510620D00435E33 /* StorageService.swift in Sources */,
 				BC531E35250F14700014A2E7 /* ClassConfiguration.swift in Sources */,
 				BC531E1D250ECBC20014A2E7 /* Grade.swift in Sources */,
 				BC531E1F250ECBD20014A2E7 /* Week.swift in Sources */,
 				BCAF60F2250B19FD00725CE4 /* ConfigView.swift in Sources */,
+				BCC24FD425167DB5001511D1 /* TimeIndicator.swift in Sources */,
 				BCDC568225110AF300435E33 /* AtAGlanceViewModel.swift in Sources */,
 				BCAF60D9250AF36600725CE4 /* SceneDelegate.swift in Sources */,
 				BC531E1B250ECB650014A2E7 /* Date.swift in Sources */,
+				BCC24FE025169EAF001511D1 /* ScheduleDayView.swift in Sources */,
 				BC531E25250ECC100014A2E7 /* Class.swift in Sources */,
 				BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */,
 				BC531E2F250ED1680014A2E7 /* PeriodConfigurationView.swift in Sources */,
 				BC531E23250ECBFB0014A2E7 /* Block.swift in Sources */,
+				BCC24FE325169F20001511D1 /* PreviewData.swift in Sources */,
 				BCAF60ED250B086E00725CE4 /* HomeViewModel.swift in Sources */,
 				BCC24FC52513D7F4001511D1 /* Schedule.swift in Sources */,
 				BCAF60DB250AF36600725CE4 /* RootView.swift in Sources */,

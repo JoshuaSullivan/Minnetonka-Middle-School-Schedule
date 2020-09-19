@@ -10,6 +10,7 @@ import Combine
 
 protocol ScheduleServiceProtocol {
     func scheduleForWeek(containing date: Date) -> AnyPublisher<[Schedule], Never>
+    func firstDayOfWeek(containing date: Date) -> Date
 }
 
 class ScheduleService: ScheduleServiceProtocol {
@@ -119,7 +120,7 @@ class ScheduleService: ScheduleServiceProtocol {
         return days
     }
 
-    private func firstDayOfWeek(containing date: Date) -> Date {
+    func firstDayOfWeek(containing date: Date) -> Date {
         // Reminder: weekdays are 1-indexed with Sunday as the first day.
         let dayOfWeek = Calendar.current.component(.weekday, from: date)
 

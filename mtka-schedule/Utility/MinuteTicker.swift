@@ -14,8 +14,12 @@ final class MinuteTicker {
 
     private var timer: Timer = Timer()
 
-    private init() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: handleTimerTick)
+    private init(mockTime: TimeOfDay? = nil) {
+        if let mockTime = mockTime {
+            currentTime = mockTime
+        } else {
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: handleTimerTick)
+        }
     }
 
     deinit {
@@ -27,5 +31,11 @@ final class MinuteTicker {
         if time != currentTime {
             currentTime = time
         }
+    }
+}
+
+extension MinuteTicker {
+    static func staticMock(with time: TimeOfDay) -> MinuteTicker {
+        return MinuteTicker(mockTime: time)
     }
 }

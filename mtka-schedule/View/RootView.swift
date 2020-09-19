@@ -25,7 +25,7 @@ struct ContentView_Previews: PreviewProvider {
 
     static var previews: some View {
         RootView(
-            homeViewModel: HomeViewModel(storage: storage),
+            homeViewModel: HomeViewModel(scheduleService: ScheduleService(storage: storage)),
             configViewModel: ConfigViewModel(storage: storage)
         )
     }

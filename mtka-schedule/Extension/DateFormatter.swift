@@ -22,4 +22,10 @@ extension DateFormatter {
         df.dateFormat = DateFormatter.dateFormat(fromTemplate: "EMd", options: 0, locale: Locale.autoupdatingCurrent)
         return df
     }()
+
+    static let dateMonthFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = DateFormatter.dateFormat(fromTemplate: "Md", options: 0, locale: Locale.autoupdatingCurrent)
+        return df
+    }()
 }
