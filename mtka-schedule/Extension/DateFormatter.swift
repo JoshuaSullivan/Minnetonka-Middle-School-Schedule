@@ -19,7 +19,7 @@ extension DateFormatter {
 
     static let dayOfWeekFormatter: DateFormatter = {
         let df = DateFormatter()
-        df.dateFormat = DateFormatter.dateFormat(fromTemplate: "EMd", options: 0, locale: Locale.autoupdatingCurrent)
+        df.dateFormat = DateFormatter.dateFormat(fromTemplate: "EEEEMd", options: 0, locale: Locale.autoupdatingCurrent)
         return df
     }()
 

@@ -115,7 +115,7 @@ class ScheduleService: ScheduleServiceProtocol {
                     return Schedule.Block(component: comp)
                 }
             }
-            return Schedule(name: DateFormatter.weekdayNameFormatter.string(from: dayDate), blocks: blocks)
+            return Schedule(name: DateFormatter.dayOfWeekFormatter.string(from: dayDate), blocks: blocks)
         }
         return days
     }

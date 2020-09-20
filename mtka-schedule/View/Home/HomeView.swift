@@ -12,8 +12,11 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        VStack {
-            ScheduleView(viewModel: viewModel.scheduleViewModel)
+        NavigationView {
+            VStack {
+                ScheduleView(viewModel: viewModel.scheduleViewModel)
+            }
+            .navigationBarTitle(viewModel.title)
         }
         .tabItem {
             Image(systemName: "house")
@@ -24,12 +27,6 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
 
 
 struct HomeView_Previews: PreviewProvider {
-
-    static var today: String {
-        let df = DateFormatter()
-        df.dateFormat = "EEEE"
-        return df.string(from: Date())
-    }
 
     static var previews: some View {
         TabView {

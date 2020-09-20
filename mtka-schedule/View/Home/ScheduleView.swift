@@ -12,15 +12,16 @@ struct ScheduleView<ViewModel: ScheduleViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                ScheduleNavView(viewModel: viewModel)
+        VStack(spacing: 0) {
+            ScheduleNavView(viewModel: viewModel)
+
+            ScrollView {
                 VStack {
                     ForEach(viewModel.days) { dayVm in
                         ScheduleDayView(viewModel: dayVm)
-                    }
-                }.padding()
-            }
+                    }.padding([.top, .bottom])
+                }
+            }.padding([.leading, .trailing])
         }
     }
 }

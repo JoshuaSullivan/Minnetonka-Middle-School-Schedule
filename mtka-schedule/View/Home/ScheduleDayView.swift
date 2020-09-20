@@ -12,7 +12,9 @@ struct ScheduleDayView<ViewModel: ScheduleDayViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text(viewModel.name)
+                .font(.title)
             ForEach(viewModel.blocks) { blockVm in
                 ScheduleBlockView(viewModel: blockVm)
             }
