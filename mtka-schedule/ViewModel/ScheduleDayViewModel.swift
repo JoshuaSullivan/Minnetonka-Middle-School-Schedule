@@ -13,14 +13,14 @@ protocol ScheduleDayViewModelProtocol: ObservableObject {
 }
 
 final class ScheduleDayViewModel: ScheduleDayViewModelProtocol {
-    let date: SimpleDate
     let name: String
+    let date: SimpleDate
     let blocks: [ScheduleBlockViewModel]
 
-    init(schedule: Schedule, date: SimpleDate) {
-        self.date = date
+    init(schedule: Schedule) {
+        date = schedule.date
         name = schedule.name
-        blocks = schedule.blocks.sorted().map { ScheduleBlockViewModel(block: $0, date: date) }
+        blocks = schedule.blocks.sorted().map { ScheduleBlockViewModel(block: $0, date: schedule.date) }
     }
 }
 

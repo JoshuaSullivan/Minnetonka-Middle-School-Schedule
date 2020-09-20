@@ -65,8 +65,8 @@ struct ScheduleBlockView_Previews: PreviewProvider {
         end: TimeOfDay(hours: 11, minutes: 40)
     )
     
-    static var vm = ScheduleBlockViewModel(block: block)
-    static var vmTwo = ScheduleBlockViewModel(block: blockTwo, ticker: MinuteTicker.staticMock(with: TimeOfDay(hours: 11, minutes: 30)))
+    static var vm = ScheduleBlockViewModel(block: block, date: Date().simpleDate)
+    static var vmTwo = ScheduleBlockViewModel(block: blockTwo, date: Date().simpleDate, ticker: MinuteTicker.staticMock(with: TimeOfDay(hours: 11, minutes: 30)))
     
     static var previews: some View {
         VStack {

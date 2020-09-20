@@ -26,6 +26,7 @@ struct Schedule {
     }
 
     let name: String
+    let date: SimpleDate
     let blocks: [Block]
 }
 
@@ -34,28 +35,23 @@ extension Schedule.Block {
 
         start = component.start
         end = component.end
-        let id = UUID().uuidString
+        id = UUID().uuidString
 
         switch component.period {
         case .classtime:
-            guard let aClass = config?.asClass else {
+            guard let config = config else {
                 preconditionFailure("You must provide a class when the type of the ScheduleComponent is .classtime")
             }
-            self.id = aClass.id
-            className = aClass.name
-            teacher = aClass.teacher
+            className = config.name
+            teacher = config.teacher
         case .lunch:
-            self.id = id
             className = "Lunch"
         case .advisory:
-            self.id = id
             className = "Advisory"
             teacher = advisoryTeacher
         case .checkAndConnect:
-            self.id = id
             className = "CheckAndConnect"
         case .mastOfficeHours:
-            self.id = id
             className = "MAST / Office Hours"
         }
     }

@@ -27,7 +27,7 @@ struct ClassConfigView: View {
 
 struct ClassConfigView_Previews: PreviewProvider {
 
-    static var aClass = ClassConfiguration(aClass: .checkAndConnect)
+    static var aClass = ClassConfiguration(name: "Check & Connect", teacher: "")
 
     static var previews: some View {
         ClassConfigView(aClass: aClass)

@@ -10,10 +10,6 @@
 		BC531E19250D480E0014A2E7 /* ClassConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E18250D480E0014A2E7 /* ClassConfigView.swift */; };
 		BC531E1B250ECB650014A2E7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E1A250ECB650014A2E7 /* Date.swift */; };
 		BC531E1D250ECBC20014A2E7 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E1C250ECBC20014A2E7 /* Grade.swift */; };
-		BC531E1F250ECBD20014A2E7 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E1E250ECBD20014A2E7 /* Week.swift */; };
-		BC531E21250ECBE40014A2E7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E20250ECBE40014A2E7 /* Day.swift */; };
-		BC531E23250ECBFB0014A2E7 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E22250ECBFB0014A2E7 /* Block.swift */; };
-		BC531E25250ECC100014A2E7 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E24250ECC100014A2E7 /* Class.swift */; };
 		BC531E27250ECC410014A2E7 /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E26250ECC410014A2E7 /* TimeOfDay.swift */; };
 		BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E28250ECC7C0014A2E7 /* GradePickerView.swift */; };
 		BC531E2B250ED0C50014A2E7 /* PeriodConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */; };
@@ -54,10 +50,6 @@
 		BC531E18250D480E0014A2E7 /* ClassConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassConfigView.swift; sourceTree = "<group>"; };
 		BC531E1A250ECB650014A2E7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BC531E1C250ECBC20014A2E7 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
-		BC531E1E250ECBD20014A2E7 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
-		BC531E20250ECBE40014A2E7 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		BC531E22250ECBFB0014A2E7 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
-		BC531E24250ECC100014A2E7 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		BC531E26250ECC410014A2E7 /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
 		BC531E28250ECC7C0014A2E7 /* GradePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradePickerView.swift; sourceTree = "<group>"; };
 		BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodConfiguration.swift; sourceTree = "<group>"; };
@@ -187,10 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				BC531E1C250ECBC20014A2E7 /* Grade.swift */,
-				BC531E1E250ECBD20014A2E7 /* Week.swift */,
-				BC531E20250ECBE40014A2E7 /* Day.swift */,
-				BC531E22250ECBFB0014A2E7 /* Block.swift */,
-				BC531E24250ECC100014A2E7 /* Class.swift */,
 				BC531E26250ECC410014A2E7 /* TimeOfDay.swift */,
 				BCC24FE925179D66001511D1 /* SimpleDate.swift */,
 				BC531E36250F9E4D0014A2E7 /* Configuraton.swift */,
@@ -314,7 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC531E21250ECBE40014A2E7 /* Day.swift in Sources */,
 				BCDC56802511054300435E33 /* MinuteTicker.swift in Sources */,
 				BC531E19250D480E0014A2E7 /* ClassConfigView.swift in Sources */,
 				BCAF60D7250AF36600725CE4 /* AppDelegate.swift in Sources */,
@@ -336,17 +323,14 @@
 				BCDC56762510620D00435E33 /* StorageService.swift in Sources */,
 				BC531E35250F14700014A2E7 /* ClassConfiguration.swift in Sources */,
 				BC531E1D250ECBC20014A2E7 /* Grade.swift in Sources */,
-				BC531E1F250ECBD20014A2E7 /* Week.swift in Sources */,
 				BCAF60F2250B19FD00725CE4 /* ConfigView.swift in Sources */,
 				BCC24FD425167DB5001511D1 /* TimeIndicator.swift in Sources */,
 				BCDC568225110AF300435E33 /* AtAGlanceViewModel.swift in Sources */,
 				BCAF60D9250AF36600725CE4 /* SceneDelegate.swift in Sources */,
 				BC531E1B250ECB650014A2E7 /* Date.swift in Sources */,
 				BCC24FE025169EAF001511D1 /* ScheduleDayView.swift in Sources */,
-				BC531E25250ECC100014A2E7 /* Class.swift in Sources */,
 				BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */,
 				BC531E2F250ED1680014A2E7 /* PeriodConfigurationView.swift in Sources */,
-				BC531E23250ECBFB0014A2E7 /* Block.swift in Sources */,
 				BCC24FEA25179D67001511D1 /* SimpleDate.swift in Sources */,
 				BCC24FE325169F20001511D1 /* PreviewData.swift in Sources */,
 				BCAF60ED250B086E00725CE4 /* HomeViewModel.swift in Sources */,
