@@ -15,6 +15,12 @@ struct ScheduleDayView<ViewModel: ScheduleDayViewModelProtocol>: View {
         VStack(alignment: .leading) {
             Text(viewModel.name)
                 .font(.title)
+            if viewModel.isShortDay {
+                ShortDayBanner()
+            }
+            if viewModel.isConferenceDay {
+                ConferenceDayBanner()
+            }
             ForEach(viewModel.blocks) { blockVm in
                 ScheduleBlockView(viewModel: blockVm)
             }
@@ -26,6 +32,8 @@ struct ScheduleDayView_Previews: PreviewProvider {
     static let schedule = PreviewData.ScheduleMocks.schedule
     static let vm = ScheduleDayViewModel(schedule: schedule)
     static var previews: some View {
-        ScheduleDayView(viewModel: vm)
+        VStack {
+            ScheduleDayView(viewModel: vm)
+        }
     }
 }

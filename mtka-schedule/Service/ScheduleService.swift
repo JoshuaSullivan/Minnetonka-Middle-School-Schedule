@@ -29,6 +29,8 @@ class ScheduleService: ScheduleServiceProtocol {
 
     let storage: StorageServiceProtocol
 
+    let calendar: SchoolCalendarServiceProtocol
+
     private var schedules: [String: WeekPublisher] = [:]
 
     var configuration: Configuration = .empty {
@@ -39,8 +41,9 @@ class ScheduleService: ScheduleServiceProtocol {
 
     var configSub: AnyCancellable?
 
-    init(storage: StorageServiceProtocol) {
+    init(storage: StorageServiceProtocol, calendar: SchoolCalendarServiceProtocol = SchoolCalendarService.shared) {
         self.storage = storage
+        self.calendar = calendar
         configSub = storage.configuration.sink { config in
             self.configuration = config
         }
@@ -77,6 +80,13 @@ class ScheduleService: ScheduleServiceProtocol {
         // Generate Monday through Friday.
         let days: [Schedule] = (1...5).map { offset in
             let dayDate = date.adding(days: offset)
+            let dayName = DateFormatter.dayOfWeekFormatter.string(from: dayDate)
+            let dayProps = calendar.getProperies(forDate: dayDate.simpleDate)
+            if dayProps.type == .noSchool {
+                return .noSchool(name: dayName, date: dayDate.simpleDate, isConferenceDay: dayProps.isConferenceDay)
+            } else if dayProps.type == .summerBreak {
+                return .summerBreak(name: dayName, date: dayDate.simpleDate)
+            }
             let components: [ScheduleComponent]
             var isWednesday = false
             if offset == 1 || offset == 4 {
@@ -115,7 +125,7 @@ class ScheduleService: ScheduleServiceProtocol {
                     return Schedule.Block(component: comp)
                 }
             }
-            return Schedule(name: DateFormatter.dayOfWeekFormatter.string(from: dayDate), date: dayDate.simpleDate, blocks: blocks)
+            return Schedule(name: dayName, date: dayDate.simpleDate, blocks: blocks, isShortDay: dayProps.type == .shortDay, isConferenceDay: dayProps.isConferenceDay)
         }
         return days
     }

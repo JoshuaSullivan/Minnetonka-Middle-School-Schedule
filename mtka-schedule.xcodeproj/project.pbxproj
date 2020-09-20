@@ -39,6 +39,12 @@
 		BCC24FE325169F20001511D1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE225169F20001511D1 /* PreviewData.swift */; };
 		BCC24FE62516A0CA001511D1 /* ScheduleNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */; };
 		BCC24FEA25179D67001511D1 /* SimpleDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE925179D66001511D1 /* SimpleDate.swift */; };
+		BCC24FEE2517BCA2001511D1 /* SchoolCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FED2517BCA2001511D1 /* SchoolCalendarService.swift */; };
+		BCC24FF125180149001511D1 /* calendar-data.json in Resources */ = {isa = PBXBuildFile; fileRef = BCC24FF025180148001511D1 /* calendar-data.json */; };
+		BCC24FF525180160001511D1 /* SchoolCalendarYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FF425180160001511D1 /* SchoolCalendarYear.swift */; };
+		BCC24FFA2518066F001511D1 /* SchoolDayProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FF92518066F001511D1 /* SchoolDayProperties.swift */; };
+		BCC24FFD251812A4001511D1 /* ShortDayBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FFC251812A4001511D1 /* ShortDayBanner.swift */; };
+		BCC25000251812AC001511D1 /* ConferenceDayBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FFF251812AC001511D1 /* ConferenceDayBanner.swift */; };
 		BCDC56762510620D00435E33 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC56752510620D00435E33 /* StorageService.swift */; };
 		BCDC567A2510FA7700435E33 /* AtAGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC56792510FA7700435E33 /* AtAGlanceView.swift */; };
 		BCDC56802511054300435E33 /* MinuteTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC567F2511054300435E33 /* MinuteTicker.swift */; };
@@ -81,6 +87,12 @@
 		BCC24FE225169F20001511D1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNavView.swift; sourceTree = "<group>"; };
 		BCC24FE925179D66001511D1 /* SimpleDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDate.swift; sourceTree = "<group>"; };
+		BCC24FED2517BCA2001511D1 /* SchoolCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCalendarService.swift; sourceTree = "<group>"; };
+		BCC24FF025180148001511D1 /* calendar-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "calendar-data.json"; sourceTree = "<group>"; };
+		BCC24FF425180160001511D1 /* SchoolCalendarYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCalendarYear.swift; sourceTree = "<group>"; };
+		BCC24FF92518066F001511D1 /* SchoolDayProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDayProperties.swift; sourceTree = "<group>"; };
+		BCC24FFC251812A4001511D1 /* ShortDayBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDayBanner.swift; sourceTree = "<group>"; };
+		BCC24FFF251812AC001511D1 /* ConferenceDayBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDayBanner.swift; sourceTree = "<group>"; };
 		BCDC56752510620D00435E33 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		BCDC56792510FA7700435E33 /* AtAGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceView.swift; sourceTree = "<group>"; };
 		BCDC567F2511054300435E33 /* MinuteTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTicker.swift; sourceTree = "<group>"; };
@@ -129,6 +141,7 @@
 				BCAF60DC250AF36600725CE4 /* Assets.xcassets */,
 				BCAF60E1250AF36700725CE4 /* LaunchScreen.storyboard */,
 				BCAF60E4250AF36700725CE4 /* Info.plist */,
+				BCC24FF025180148001511D1 /* calendar-data.json */,
 				BCAF60DE250AF36600725CE4 /* Preview Content */,
 			);
 			path = "mtka-schedule";
@@ -185,6 +198,8 @@
 				BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */,
 				BC531E34250F14700014A2E7 /* ClassConfiguration.swift */,
 				BCC24FC42513D7F4001511D1 /* Schedule.swift */,
+				BCC24FF425180160001511D1 /* SchoolCalendarYear.swift */,
+				BCC24FF92518066F001511D1 /* SchoolDayProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +209,7 @@
 			children = (
 				BCDC56752510620D00435E33 /* StorageService.swift */,
 				BCDC568325115F3500435E33 /* ScheduleService.swift */,
+				BCC24FED2517BCA2001511D1 /* SchoolCalendarService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -205,6 +221,8 @@
 				BCC24FD025167B4C001511D1 /* ScheduleView.swift */,
 				BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */,
 				BCC24FDF25169EAF001511D1 /* ScheduleDayView.swift */,
+				BCC24FFC251812A4001511D1 /* ShortDayBanner.swift */,
+				BCC24FFF251812AC001511D1 /* ConferenceDayBanner.swift */,
 				BCC24FD625167EDB001511D1 /* ScheduleBlockView.swift */,
 				BCC24FD325167DB5001511D1 /* TimeIndicator.swift */,
 				BCDC56792510FA7700435E33 /* AtAGlanceView.swift */,
@@ -292,6 +310,7 @@
 				BCAF60E3250AF36700725CE4 /* LaunchScreen.storyboard in Resources */,
 				BCAF60E0250AF36600725CE4 /* Preview Assets.xcassets in Resources */,
 				BCAF60DD250AF36600725CE4 /* Assets.xcassets in Resources */,
+				BCC24FF125180149001511D1 /* calendar-data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,16 +322,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCDC56802511054300435E33 /* MinuteTicker.swift in Sources */,
+				BCC24FF525180160001511D1 /* SchoolCalendarYear.swift in Sources */,
 				BC531E19250D480E0014A2E7 /* ClassConfigView.swift in Sources */,
 				BCAF60D7250AF36600725CE4 /* AppDelegate.swift in Sources */,
 				BCC24FC22513D7BE001511D1 /* ScheduleViewModel.swift in Sources */,
 				BCC24FD725167EDB001511D1 /* ScheduleBlockView.swift in Sources */,
 				BCC24FD125167B4C001511D1 /* ScheduleView.swift in Sources */,
+				BCC24FFD251812A4001511D1 /* ShortDayBanner.swift in Sources */,
 				BCAF60F0250B098A00725CE4 /* DateFormatter.swift in Sources */,
 				BC531E37250F9E4D0014A2E7 /* Configuraton.swift in Sources */,
 				BCDC568425115F3500435E33 /* ScheduleService.swift in Sources */,
 				BCC24FDD25169D5A001511D1 /* ScheduleDayViewModel.swift in Sources */,
 				BC531E27250ECC410014A2E7 /* TimeOfDay.swift in Sources */,
+				BCC24FFA2518066F001511D1 /* SchoolDayProperties.swift in Sources */,
 				BCC24FE62516A0CA001511D1 /* ScheduleNavView.swift in Sources */,
 				BCAF60F4250B1A3400725CE4 /* ConfigViewModel.swift in Sources */,
 				BCDC567A2510FA7700435E33 /* AtAGlanceView.swift in Sources */,
@@ -325,10 +347,12 @@
 				BC531E1D250ECBC20014A2E7 /* Grade.swift in Sources */,
 				BCAF60F2250B19FD00725CE4 /* ConfigView.swift in Sources */,
 				BCC24FD425167DB5001511D1 /* TimeIndicator.swift in Sources */,
+				BCC25000251812AC001511D1 /* ConferenceDayBanner.swift in Sources */,
 				BCDC568225110AF300435E33 /* AtAGlanceViewModel.swift in Sources */,
 				BCAF60D9250AF36600725CE4 /* SceneDelegate.swift in Sources */,
 				BC531E1B250ECB650014A2E7 /* Date.swift in Sources */,
 				BCC24FE025169EAF001511D1 /* ScheduleDayView.swift in Sources */,
+				BCC24FEE2517BCA2001511D1 /* SchoolCalendarService.swift in Sources */,
 				BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */,
 				BC531E2F250ED1680014A2E7 /* PeriodConfigurationView.swift in Sources */,
 				BCC24FEA25179D67001511D1 /* SimpleDate.swift in Sources */,

@@ -28,6 +28,26 @@ struct Schedule {
     let name: String
     let date: SimpleDate
     let blocks: [Block]
+    let isShortDay: Bool
+    let isConferenceDay: Bool
+
+    init(name: String, date: SimpleDate, blocks: [Block], isShortDay: Bool = false, isConferenceDay: Bool = false) {
+        self.name = name
+        self.date = date
+        self.blocks = blocks
+        self.isShortDay = isShortDay
+        self.isConferenceDay = isConferenceDay
+    }
+}
+
+extension Schedule {
+    static func noSchool(name: String, date: SimpleDate, isConferenceDay: Bool = false) -> Schedule {
+        return Schedule(name: name, date: date, blocks: [.noSchool], isConferenceDay: isConferenceDay)
+    }
+
+    static func summerBreak(name: String, date: SimpleDate) -> Schedule {
+        return Schedule(name: name, date: date, blocks: [.summerBreak])
+    }
 }
 
 extension Schedule.Block {
@@ -55,4 +75,20 @@ extension Schedule.Block {
             className = "MAST / Office Hours"
         }
     }
+
+    static let noSchool = Schedule.Block(
+        id: "no-school",
+        className: "No School",
+        teacher: nil,
+        start: TimeOfDay(hours: 9, minutes: 30),
+        end: TimeOfDay(hours: 10, minutes: 00)
+    )
+
+    static let summerBreak = Schedule.Block(
+        id: "summerBreak",
+        className: "Summer Break",
+        teacher: nil,
+        start: TimeOfDay(hours: 9, minutes: 30),
+        end: TimeOfDay(hours: 10, minutes: 00)
+    )
 }

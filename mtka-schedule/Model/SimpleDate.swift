@@ -35,3 +35,11 @@ struct SimpleDate: Equatable, Comparable {
         return Calendar.current.date(from: comps) ?? Date()
     }
 }
+
+extension SimpleDate: Codable {
+    enum CodingKeys: String, CodingKey {
+        case year = "y"
+        case month = "m"
+        case day = "d"
+    }
+}
