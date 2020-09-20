@@ -49,7 +49,6 @@ class ConfigViewModel: ConfigViewModelProtocol {
             self.studentName = config.studentName
             self.gradeLevel = config.gradeLevel
             self.periods = config.periods
-            self.objectWillChange.send()
         }
     }
 

@@ -12,12 +12,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        NavigationView {
             VStack {
                 ScheduleView(viewModel: viewModel.scheduleViewModel)
             }
-            .navigationBarTitle(viewModel.title)
-        }
         .tabItem {
             Image(systemName: "house")
             Text("Home")

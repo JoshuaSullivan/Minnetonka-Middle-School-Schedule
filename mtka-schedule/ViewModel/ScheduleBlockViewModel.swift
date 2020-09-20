@@ -20,6 +20,9 @@ final class ScheduleBlockViewModel: ScheduleBlockViewModelProtocol {
     var timespan: String { "\(block.start.description) - \(block.end.description)" }
 
     var title: String {
+        if block.className.isEmpty {
+            return "Class not set."
+        }
         if let teacher = block.teacher {
             return "\(block.className) - \(teacher)"
         }

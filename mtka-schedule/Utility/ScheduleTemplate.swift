@@ -146,7 +146,7 @@ enum ScheduleTemplate {
         enum Segment3 {
             static let whole = [
                 ScheduleComponent(
-                    period: .classtime(1, .whole),
+                    period: .classtime(3, .whole),
                     start: TimeOfDay(hours: 14, minutes: 03),
                     end: TimeOfDay(hours: 15, minutes: 40)
                 )
@@ -154,12 +154,12 @@ enum ScheduleTemplate {
 
             static let split = [
                 ScheduleComponent(
-                    period: .classtime(1, .splitA),
+                    period: .classtime(3, .splitA),
                     start: TimeOfDay(hours: 14, minutes: 03),
                     end: TimeOfDay(hours: 14, minutes: 50)
                 ),
                 ScheduleComponent(
-                    period: .classtime(1, .splitB),
+                    period: .classtime(3, .splitB),
                     start: TimeOfDay(hours: 14, minutes: 53),
                     end: TimeOfDay(hours: 15, minutes: 40)
                 )
