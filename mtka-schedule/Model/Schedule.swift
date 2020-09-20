@@ -8,7 +8,7 @@
 import Foundation
 
 struct Schedule {
-    struct Block: Identifiable {
+    struct Block: Identifiable, Comparable {
         var id: String
         var className: String
         var teacher: String?
@@ -18,6 +18,10 @@ struct Schedule {
         var meetCode: String? {
             guard let teacher = teacher else { return nil }
             return teacher.lowercased().components(separatedBy: .whitespaces).joined()
+        }
+
+        static func < (lhs: Block, rhs: Block) -> Bool {
+            return lhs.start < rhs.start
         }
     }
 

@@ -42,6 +42,7 @@
 		BCC24FE025169EAF001511D1 /* ScheduleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FDF25169EAF001511D1 /* ScheduleDayView.swift */; };
 		BCC24FE325169F20001511D1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE225169F20001511D1 /* PreviewData.swift */; };
 		BCC24FE62516A0CA001511D1 /* ScheduleNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */; };
+		BCC24FEA25179D67001511D1 /* SimpleDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC24FE925179D66001511D1 /* SimpleDate.swift */; };
 		BCDC56762510620D00435E33 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC56752510620D00435E33 /* StorageService.swift */; };
 		BCDC567A2510FA7700435E33 /* AtAGlanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC56792510FA7700435E33 /* AtAGlanceView.swift */; };
 		BCDC56802511054300435E33 /* MinuteTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC567F2511054300435E33 /* MinuteTicker.swift */; };
@@ -87,6 +88,7 @@
 		BCC24FDF25169EAF001511D1 /* ScheduleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayView.swift; sourceTree = "<group>"; };
 		BCC24FE225169F20001511D1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		BCC24FE52516A0CA001511D1 /* ScheduleNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNavView.swift; sourceTree = "<group>"; };
+		BCC24FE925179D66001511D1 /* SimpleDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDate.swift; sourceTree = "<group>"; };
 		BCDC56752510620D00435E33 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		BCDC56792510FA7700435E33 /* AtAGlanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtAGlanceView.swift; sourceTree = "<group>"; };
 		BCDC567F2511054300435E33 /* MinuteTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTicker.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				BC531E22250ECBFB0014A2E7 /* Block.swift */,
 				BC531E24250ECC100014A2E7 /* Class.swift */,
 				BC531E26250ECC410014A2E7 /* TimeOfDay.swift */,
+				BCC24FE925179D66001511D1 /* SimpleDate.swift */,
 				BC531E36250F9E4D0014A2E7 /* Configuraton.swift */,
 				BC531E2A250ED0C50014A2E7 /* PeriodConfiguration.swift */,
 				BC531E34250F14700014A2E7 /* ClassConfiguration.swift */,
@@ -344,6 +347,7 @@
 				BC531E29250ECC7C0014A2E7 /* GradePickerView.swift in Sources */,
 				BC531E2F250ED1680014A2E7 /* PeriodConfigurationView.swift in Sources */,
 				BC531E23250ECBFB0014A2E7 /* Block.swift in Sources */,
+				BCC24FEA25179D67001511D1 /* SimpleDate.swift in Sources */,
 				BCC24FE325169F20001511D1 /* PreviewData.swift in Sources */,
 				BCAF60ED250B086E00725CE4 /* HomeViewModel.swift in Sources */,
 				BCC24FC52513D7F4001511D1 /* Schedule.swift in Sources */,

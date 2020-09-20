@@ -34,18 +34,21 @@ final class ScheduleBlockViewModel: ScheduleBlockViewModelProtocol {
 
     private let block: Schedule.Block
 
+    private let date: SimpleDate
+
     private var tickerSub: AnyCancellable?
 
-    init(block: Schedule.Block, ticker: MinuteTicker = MinuteTicker.shared) {
+    init(block: Schedule.Block, date: SimpleDate, ticker: MinuteTicker = MinuteTicker.shared) {
         self.block = block
+        self.date = date
 
         let time = Date().timeOfDay
-        if time >= block.start && time < block.end {
+        if time >= block.start && time < block.end && date.isToday {
             self.markerTime = block.start.duration(to: time)
         }
 
         tickerSub = ticker.ticker.sink(receiveValue: {[weak self] time in
-            if time >= block.start && time < block.end {
+            if time >= block.start && time < block.end && date.isToday {
                 self?.markerTime = block.start.duration(to: time)
             } else {
                 self?.markerTime = nil

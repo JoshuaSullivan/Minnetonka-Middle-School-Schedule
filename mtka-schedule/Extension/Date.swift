@@ -21,4 +21,13 @@ extension Date {
         let comps = Calendar.current.dateComponents([.hour, .minute], from: self)
         return TimeOfDay(hours: comps.hour ?? 0, minutes: comps.minute ?? 0)
     }
+
+    var simpleDate: SimpleDate {
+        let comps = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        return SimpleDate(year: comps.year!, month: comps.month!, day: comps.day!)
+    }
+
+    var isToday: Bool {
+        return simpleDate == Date().simpleDate
+    }
 }
