@@ -29,18 +29,25 @@ class ScheduleViewModel: ScheduleViewModelProtocol {
     init(scheduleService: ScheduleServiceProtocol, startDate: Date = Date()) {
         self.scheduleService = scheduleService
         anchorDate = startDate
-        scheduleSub = scheduleService.scheduleForWeek(containing: startDate).sink(receiveValue: {[weak self] scheduleDays in
+
+        switchToWeek(containing: startDate)
+    }
+
+    func switchToWeek(containing date: Date) {
+        scheduleSub = scheduleService.scheduleForWeek(containing: date).sink(receiveValue: {[weak self] scheduleDays in
             self?.days = scheduleDays.map { ScheduleDayViewModel(schedule: $0) }
         })
-        let monday = scheduleService.firstDayOfWeek(containing: startDate).adding(days: 1)
+        let monday = scheduleService.firstDayOfWeek(containing: date).adding(days: 1)
         weekName = DateFormatter.dateMonthFormatter.string(from: monday)
     }
 
     func prevWeekTapped() {
-        print("Prev week!")
+        anchorDate = anchorDate.adding(days: -7)
+        switchToWeek(containing: anchorDate)
     }
 
     func nextWeekTapped() {
-        print("Next week!")
+        anchorDate = anchorDate.adding(days: 7)
+        switchToWeek(containing: anchorDate)
     }
 }
